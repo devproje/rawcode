@@ -12,7 +12,7 @@ export const usePalette = create<PaletteState>()(
 	(set) => ({
 		page: "",
 		enable: false,
-		setPage: (page) => set((_) => ({ page: page })),
-		setEnable: (enable) => set((_) => ({ enable: enable }))
+		setPage: (page) => set({ page: page }),
+		setEnable: (enable) => set({ enable: enable })
 	})
 );

@@ -6,16 +6,17 @@ import { loadLanguage } from "@uiw/codemirror-extensions-langs";
 import CodeMirror, { oneDark } from "@uiw/react-codemirror";
 import { useTab } from "../../store/tabsize";
 import { useLanguage } from "../../store/language";
+import useFileStore from "../../store/file";
 
 function Editor() {
-	const [code, setCode] = useState("");
+	const file = useFileStore();
 	const lang = useLanguage();
 	const tab = useTab();
 
 	return (
 		<div className="code_container">
 			<CodeMirror
-				value={code}
+				value={file.buf}
 				height="100%"
 				extensions={[
 					loadLanguage(lang.lang.ext ?? "textile") ?? basicSetup()
@@ -35,7 +36,7 @@ function Editor() {
 				theme={oneDark}
 				className="editor"
 				placeholder={"// Enter code here..."}
-				onChange={(value) => setCode(value)}
+				onChange={(value) => file.setBuf(value)}
 			/>
 		</div>
 	);

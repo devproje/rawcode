@@ -48,6 +48,12 @@ code, pre {
 	flex-direction: column;
 }
 
+.code_area {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		color: #f6f6f6;

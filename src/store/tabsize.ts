@@ -8,6 +8,6 @@ interface TabSizeState {
 export const useTab = create<TabSizeState>()(
 	(set) => ({
 		size: 8,
-		setSize: (size) => set((_) => ({ size: size }))
+		setSize: (size) => set({ size: size })
 	})
 );

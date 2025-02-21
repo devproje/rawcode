@@ -9,6 +9,6 @@ interface LanguageState {
 export const useLanguage = create<LanguageState>()(
 	(set) => ({
 		lang: Extensions.text,
-		setLang: (lang) => set((_) => ({ lang: lang }))
+		setLang: (lang) => set({ lang: lang })
 	})
 );

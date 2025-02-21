@@ -4,6 +4,7 @@ import { ExtensionList } from "../../types/lang";
 import { useTab } from "../../store/tabsize";
 import { usePalette } from "../../store/palette";
 import Palette from "../palette";
+import useFileStore from "../../store/file";
 
 function TabSizeController() {
 	const tab = useTab();
@@ -57,6 +58,7 @@ function SelectLanguage() {
 
 function CurrentFile() {
 	const palette = usePalette();
+	const file = useFileStore();
 	const lang = useLanguage();
 	const tab = useTab();
 
@@ -72,7 +74,7 @@ function CurrentFile() {
 	console.log(`${palette.enable}, ${palette.page}`);
 	return (
 		<div className="current">
-			<span>No file</span>
+			<span>{file.file === "" ? "no file" : file.file}</span>
 			<div className="controller">
 				<a className="tab_size" onClick={ev => {
 					ev.preventDefault();
