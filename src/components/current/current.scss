@@ -1,0 +1,56 @@
+.current {
+	width: 100%;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	padding: 0 0.5rem;
+	justify-content: space-between;
+
+	.controller {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		.tab_size {
+			height: 24px;
+			padding: 0 5px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.current_language {
+			height: 24px;
+			padding: 0 5px;
+			cursor: pointer;
+			user-select: none;
+			background-color: gray;
+		}
+	}
+}
+
+.tab_size_controller {
+	width: 100%;
+	height: 250px;
+	display: flex;
+	overflow-y: scroll;
+	flex-direction: column;
+	justify-content: center;
+
+	.ts {
+		cursor: pointer;
+	}
+}
+
+.language_selector {
+	width: 100%;
+	height: 250px;
+	display: flex;
+	overflow-y: scroll;
+	flex-direction: column;
+	justify-content: center;
+
+	.lang {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,14 @@
+.palette_container {
+	top: 0;
+	left: 50%;
+	width: 600px;
+	display: flex;
+	position: fixed;
+	height: fit-content;
+	transform: translateX(-50%);
+	background-color: aquamarine;
+
+	div {
+		padding: 0 5px;
+	}
+}
